@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Copilot Certification Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <div class="logo-placeholder">
+                <svg height="36" aria-hidden="true" viewBox="0 0 16 16" width="36" data-view-component="true" fill="currentColor">
+                    <path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
+                </svg>
+            </div>
+            <h1>Examen de Certificación GitHub Copilot</h1>
+            <p>Pon a prueba tus conocimientos sobre el asistente de IA</p>
+        </header>
+
+        <main id="quiz-container">
+            <div id="start-screen" class="screen active start-content">
+                <div class="welcome-icon">🚀</div>
+                <h2>Bienvenido al Simulador</h2>
+                <p>Este entorno de prueba está diseñado para simular el examen oficial. Evalúa tu dominio en la implementación, buenas prácticas y características avanzadas de Copilot.</p>
+                
+                <div class="feature-list-container">
+                    <ul class="feature-list">
+                        <li><span class="feature-emoji">📝</span> Preguntas basadas en el temario oficial</li>
+                        <li><span class="feature-emoji">⚡</span> Retroalimentación instantánea y detallada</li>
+                        <li><span class="feature-emoji">📊</span> Puntuación y resumen al finalizar</li>
+                    </ul>
+                </div>
+
+                <button id="start-btn" class="btn primary pulse-btn">Comenzar Test <span class="arrow">→</span></button>
+            </div>
+
+            <div id="question-screen" class="screen">
+                <div class="progress-bar">
+                    <div id="progress" class="progress"></div>
+                </div>
+                
+                <div class="question-header">
+                    <span id="question-counter">Pregunta 1 de X</span>
+                    <button id="finish-btn" class="btn danger small hidden">Finalizar Test</button>
+                </div>
+                
+                <div id="question-nav" class="question-nav">
+                    <!-- Navigation buttons dynamically inserted here -->
+                </div>
+
+                <h3 id="question-text">Question text here?</h3>
+                <p id="question-instruction" class="question-instruction"></p>
+                <div id="options-container" class="options">
+                    <!-- Options will be dynamically inserted here -->
+                </div>
+                <div id="feedback-container" class="feedback hidden">
+                    <p id="feedback-text"></p>
+                    <p id="explanation-text" class="explanation"></p>
+                </div>
+                <div class="navigation-buttons">
+                    <button id="prev-btn" class="btn secondary hidden">Pregunta Anterior</button>
+                    <button id="next-btn" class="btn primary hidden">Siguiente Pregunta</button>
+                </div>
+            </div>
+
+            <div id="result-screen" class="screen">
+                <h2>Resultados del Test</h2>
+                <div class="score-container">
+                    <span id="score-text">0/0</span>
+                    <p id="score-percentage">0%</p>
+                </div>
+                <p id="result-message">¡Buen intento!</p>
+                <button id="restart-btn" class="btn primary">Volver a intentar</button>
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
